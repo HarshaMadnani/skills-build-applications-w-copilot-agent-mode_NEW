@@ -3,20 +3,6 @@ import { Activity, Leaderboard, Team, User, Workout } from '../models/index.js';
 
 const router = Router();
 
-const codespaceName = process.env.CODESPACE_NAME;
-const baseUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-router.get('/api/', (_request, response) => {
-  response.json({
-    baseUrl,
-    endpoints: ['users', 'teams', 'activities', 'leaderboard', 'workouts'].map(
-      (resource) => `/api/${resource}/`,
-    ),
-  });
-});
-
 router.get('/api/users/', async (_request, response) => {
   response.json(await User.find().lean());
 });
