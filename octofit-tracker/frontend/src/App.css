@@ -1,0 +1,153 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #123c35;
+  color: #fff;
+  box-shadow: 0 3px 16px rgb(17 55 49 / 12%);
+}
+
+.app-header-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand:hover {
+  color: #d8f3e6;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.app-nav {
+  gap: 0.25rem;
+}
+
+.app-nav .nav-link {
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  color: rgb(255 255 255 / 80%);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.app-nav .nav-link:hover,
+.app-nav .nav-link.active {
+  background: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+.app-main {
+  flex: 1;
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 4rem;
+}
+
+.resource-page {
+  text-align: left;
+}
+
+.page-heading {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.45rem;
+  color: #35806b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.page-heading h1 {
+  margin: 0;
+  color: #173e36;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.page-description {
+  margin-top: 0.55rem;
+  color: #687873;
+}
+
+.resource-table-wrap {
+  overflow: hidden;
+  border: 1px solid #e2ebe7;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 10px 30px rgb(17 55 49 / 6%);
+}
+
+.resource-table {
+  margin: 0;
+}
+
+.resource-table thead th {
+  padding: 1rem;
+  border-bottom-color: #e2ebe7;
+  background: #f1f7f4;
+  color: #34534b;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.resource-table tbody td {
+  padding: 1rem;
+  color: #334840;
+}
+
+.app-footer {
+  padding: 1.25rem 0;
+  background: #f1f7f4;
+  color: #567067;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .app-header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .app-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .app-nav .nav-link {
+    padding-inline: 0.7rem;
+    white-space: nowrap;
+  }
+}
